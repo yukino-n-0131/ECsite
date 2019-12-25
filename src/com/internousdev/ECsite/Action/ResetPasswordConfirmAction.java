@@ -2,9 +2,12 @@ package com.internousdev.ECsite.Action;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.internousdev.ECsite.dao.UserInfoDAO;
 import com.internousdev.ECsite.util.CommonUtility;
 import com.internousdev.ECsite.util.InputChecker;
+import com.opensymphony.xwork2.ActionSupport;
 
 // struts2が持つActionSupportクラスを敬称するメソッド
 public class ResetPasswordConfirmAction extends ActionSupport implements SessionAware {

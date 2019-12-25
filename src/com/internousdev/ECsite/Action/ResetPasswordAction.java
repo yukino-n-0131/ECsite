@@ -1,6 +1,10 @@
 package com.internousdev.ECsite.Action;
 import java.util.Map;
 
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
 public class ResetPasswordAction extends ActionSupport implements SessionAware {
 
 		//
