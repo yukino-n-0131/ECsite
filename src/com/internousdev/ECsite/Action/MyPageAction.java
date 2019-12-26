@@ -4,11 +4,9 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.ECsite.dao.UserInfoDAO;
-import com.internousdev.ECsite.dto.UserInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-//truts2が持つActionSupportクラスを継承する
+// truts2が持つActionSupportクラスを継承する
 public class MyPageAction extends ActionSupport implements SessionAware {
 
 	UserInfoDTO userInfoDTO;
@@ -18,7 +16,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 	public String execute() {
 
 		/* 仮ログインnullを初期値として、tempで仮ログインを一時利用、整数を解析する */
-		/* loginFlgと1が等しくない場合は、loginErrorページでへ飛ぶ */
+		/* loginFlgと1が等しくない場合は、loginErrorページへ飛ぶ */
 		String tempLogined = String.valueOf(session.get("loginFlg"));
 		int loginFlg = "null".equals(tempLogined)? 0 : Integer.parseInt(tempLogined);
 		if (loginFlg != 1) {
